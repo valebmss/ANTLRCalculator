@@ -10,6 +10,13 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface CalculatorVisitor<T> extends ParseTreeVisitor<T> {
 	/**
+	 * Visit a parse tree produced by the {@code Float}
+	 * labeled alternative in {@link CalculatorParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFloat(CalculatorParser.FloatContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code MulDiv}
 	 * labeled alternative in {@link CalculatorParser#expr}.
 	 * @param ctx the parse tree
